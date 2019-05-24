@@ -1,7 +1,5 @@
 
 fieldset {
   display:flex;
-  flex-direction: row;
-  flex-basis: 200px;
-  justify-content: flex-end;
+  flex-direction: column;
 }

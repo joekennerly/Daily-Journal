@@ -1,17 +1,21 @@
 GIT WORKFLOW
----------
+----Load Boilerplate----
 01. mg (directory)
 02. touch index.html
 03. code .
 04. !(tab)
----------
+
+----First Commit----
 05. git init
 06. git status
 07. git add (file)
 08. git commit -m "(message)"
+
+----Init Remote Repo----
 09. git remote add origin (remote)
 10. git push origin master
----------
+
+----Feature Branch----
 11. git checkout -b (branch)
 12. code . 
 13. git status

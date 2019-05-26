@@ -1,17 +1,16 @@
 GIT WORKFLOW
 --------
+//////////////////////////////// Inside workspace
 01. mg (directory)
-02. touch index.html
-03. code .
-04. !(tab)
+02. touch (file)
 --------
-05. git init
+05. git init ////////////////////////// ONLY ONCE
 06. git status
 07. git add (file)
 08. git commit -m "(message)"
 --------
 09. git remote add origin (remote)
-10. git push origin master
+10. git push origin master //////////// ONLY ONCE
 --------
 11. git checkout -b (branch)
 12. code . 

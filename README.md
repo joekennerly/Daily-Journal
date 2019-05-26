@@ -1,10 +1,9 @@
 GIT WORKFLOW
 --------
-//////////////////////////////// Inside workspace
 01. mg (directory)
 02. touch (file)
 --------
-05. git init ////////////////////////// ONLY ONCE
+05. git init
 06. git status
 07. git add (file)
 08. git commit -m "(message)"

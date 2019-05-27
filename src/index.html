@@ -9,36 +9,37 @@
   <title>Daily Journal</title>
 </head>
 <body>
-
-  <h1>Daily Journal</h1>
-
-  <form action="">
-    <fieldset>
-      <label for="JournalDate">Date of Entry:</label>
-      <input type="date" name="journalDate" id="journalDate">
-    </fieldset>
-    
-    <fieldset>
-      <label for="ConceptsCovered">Concepts Covered:</label>
-      <input type="text" name="concepts" id="concepts">
-    </fieldset>
-
-    <fieldset>
-      <label for="Entry">Journal Entry</label>
-      <textarea name="entry" id="entry"></textarea>
-    </fieldset>
-
-    <fieldset>
-      <label for="Mood">Mood for the day</label>
-      <select name="Mood" id="Mood">
-        <option value="Happy">Happy</option>
-        <option value="Sad">Sad</option>
-        <option value="Angry">Angry</option>
-        <option value="Confused">Confused</option>
-      </select>
-    </fieldset>
-
-    <button>Record Journal Entry</button>
-  </form>
+  <article class="main-container">
+    <h1>Daily Journal</h1>
+  
+    <form id="journal-form" class="journal-form" action="">
+      <fieldset>
+        <label for="JournalDate">Date of Entry:</label>
+        <input type="date" name="journalDate" id="journalDate">
+      </fieldset>
+      
+      <fieldset>
+        <label for="ConceptsCovered">Concepts Covered:</label>
+        <input type="text" name="concepts" id="concepts">
+      </fieldset>
+  
+      <fieldset>
+        <label for="Entry">Journal Entry</label>
+        <textarea name="entry" id="entry"></textarea>
+      </fieldset>
+  
+      <fieldset>
+        <label for="Mood">Mood for the day</label>
+        <select name="Mood" id="Mood">
+          <option value="Happy">Happy</option>
+          <option value="Sad">Sad</option>
+          <option value="Angry">Angry</option>
+          <option value="Confused">Confused</option>
+        </select>
+      </fieldset>
+  
+      <button>Record Journal Entry</button>
+    </form>
+  </article>
 </body>
 </html>

@@ -1,4 +1,53 @@
+* {
+  margin:0;
+  padding:0;
+}
+
+body {
+  background: darkblue;
+  color:white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.8em;
+  margin-top: 100px;
+}
+
+a {
+  color:lightblue;
+  text-decoration: none;
+}
+
+h1 {
+  font-size:3em;
+}
+
+.main-container {
+  background:darkslategray;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  border: 4px solid green;
+  margin: auto;
+}
+
+.journal-form {
+  padding: 20px;
+}
+
+.main-container h1,
+.journal-form label {
+  text-align: center;
+  padding: 16px 0;
+}
+
 fieldset {
   display:flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+  align-items: space-evenly;
+  margin-bottom: 20px;
+}
+
+.journal-form button,
+#entry, #concepts {
+  width:100%;
 }

@@ -9,15 +9,17 @@
   <title>Daily Journal</title>
 </head>
 <body>
-  <article class="main-container">
-    <h1>Daily Journal</h1>
+  <article class="page-container">
+    <h1 class="page-title">Daily Journal</h1>
 
-    <p>small change</p>
+    <p class="page-description">Record the day's events</p>
   
     <form id="journal-form" class="journal-form" action="">
       <fieldset>
         <label for="JournalDate">Date of Entry:</label>
-        <input type="date" name="journalDate" id="journalDate">
+        <div class="journal-box">
+          <input type="date" name="journalDate" id="journalDate">
+        </div>
       </fieldset>
       
       <fieldset>
@@ -32,12 +34,14 @@
   
       <fieldset>
         <label for="Mood">Mood for the day</label>
-        <select name="Mood" id="Mood">
-          <option value="Happy">Happy</option>
-          <option value="Sad">Sad</option>
-          <option value="Angry">Angry</option>
-          <option value="Confused">Confused</option>
-        </select>
+        <div class="journal-box">
+          <select name="Mood" id="Mood">
+            <option value="Happy">Happy</option>
+            <option value="Sad">Sad</option>
+            <option value="Angry">Angry</option>
+            <option value="Confused">Confused</option>
+          </select>
+        </div>
       </fieldset>
   
       <button>Record Journal Entry</button>

@@ -4,11 +4,9 @@
 }
 
 body {
-  background: darkblue;
+  background: black;
   color:white;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.8em;
-  margin-top: 100px;
 }
 
 a {
@@ -16,21 +14,35 @@ a {
   text-decoration: none;
 }
 
-h1 {
-  font-size:3em;
-}
 
-.main-container {
-  background:darkslategray;
+.page-container {
+  background: darkblue;
   width: 80%;
   display: flex;
   flex-direction: column;
-  border: 4px solid green;
-  margin: auto;
+  margin: 10px auto;
+  border-radius:10px;
+}
+
+.page-title {
+  font-size: 2.5em;
+}
+
+.page-title,
+.page-description {
+  margin: 10px 0;
+  text-align: center;
 }
 
 .journal-form {
   padding: 20px;
+}
+.journal-form fieldset {
+  padding:0 20px 20px 20px;
+  display:flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  border-radius: 4px;
 }
 
 .main-container h1,
@@ -39,15 +51,15 @@ h1 {
   padding: 16px 0;
 }
 
-fieldset {
+.journal-box {
+  width: 200px;
+  margin:auto;
   display:flex;
-  flex-direction: row;
   justify-content: center;
-  align-items: space-evenly;
-  margin-bottom: 20px;
 }
 
 .journal-form button,
 #entry, #concepts {
   width:100%;
+  border-radius: 4px;
 }

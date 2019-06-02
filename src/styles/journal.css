@@ -11,7 +11,8 @@ body {
 
 .journal-form {
   background: green;
-  border: 50px solid darkgreen;
+  border: 20px solid darkgreen;
+  box-shadow: 0px 0px 400px darkgreen;
   width: 40%;
   display: flex;
   flex-flow: row wrap;
@@ -24,6 +25,9 @@ body {
 h1{
   text-align: center;
   padding-bottom: 20px;
+  order:-1;
+  text-decoration: underline;
+  font-size:2.8em;
 }
 
 fieldset {
@@ -33,12 +37,19 @@ fieldset {
   padding: 0 20px 20px 20px;
 }
 
-fieldset label {
-  margin-bottom: 20px;
+.prompt {
+  font-family: "prompt";
+}
+
+label p {
+  margin-bottom: 10px;
+  font-family: "prompt";
+  font-size: 1.2em;
 }
 
 .fieldset-large {
   flex-basis: 100%;
+  order:2;
 }
 
 #entry,
@@ -46,8 +57,11 @@ fieldset label {
   width: 100%;
   border-radius: 4px;
   margin:auto;
+  font-family:consolas;
+  font-size:1.1em;
 }
 
 #submit {
   margin:auto;
+  order:3;
 }

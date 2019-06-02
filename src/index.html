@@ -8,25 +8,12 @@
     <title>Daily Journal</title>
   </head>
   <body>
-
     <form id="journal-form" class="journal-form" action="">
-
       <h1 class="fieldset-large">Journal</h1>
 
       <fieldset>
         <label for="JournalDate">Date of Entry:</label>
-          <input type="date" name="journalDate" id="journalDate" />
-      </fieldset>
-
-      <fieldset>
-        <label for="Mood">Mood for the day</label>
-          <select name="Mood" id="Mood">
-            <option value="Okay">Okay</option>
-            <option value="Happy">Happy</option>
-            <option value="Sad">Sad</option>
-            <option value="Angry">Angry</option>
-            <option value="Confused">Confused</option>
-          </select>
+        <input type="date" name="journalDate" id="journalDate" />
       </fieldset>
 
       <fieldset class="fieldset-large">
@@ -39,8 +26,18 @@
         <textarea name="entry" id="entry"></textarea>
       </fieldset>
 
-      <button id="submit" class="btn">Record Journal Entry</button>
+      <fieldset>
+        <label for="Mood">Mood for the day</label>
+        <select name="Mood" id="Mood">
+          <option value="Okay">Okay</option>
+          <option value="Happy">Happy</option>
+          <option value="Sad">Sad</option>
+          <option value="Angry">Angry</option>
+          <option value="Confused">Confused</option>
+        </select>
+      </fieldset>
 
+      <button id="submit" class="btn">Record Journal Entry</button>
     </form>
 
     <script src="scripts/journal.js"></script>

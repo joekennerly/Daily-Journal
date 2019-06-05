@@ -2,6 +2,7 @@
 
 // Create a container
 const allEntries = []
+
 console.log(allEntries);
 
 // Create a template
@@ -11,9 +12,8 @@ const journalEntryObject = {
   entry:"this is entry",
   mood:"mood"
 }
-console.log(journalEntryObject);
 
-// Push the template literal
-allEntries.push(`${journalEntryObject}`)
+// Push the object
+allEntries.push(journalEntryObject)
 
 console.log(allEntries)

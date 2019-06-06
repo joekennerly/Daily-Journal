@@ -10,10 +10,8 @@ body {
 }
 
 .journal-form {
-  background: green;
-  border: 20px solid darkgreen;
-  box-shadow: 0px 0px 400px darkgreen;
-  width: 40%;
+  background: darkgreen;
+  width: 80%;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly; 
@@ -64,4 +62,16 @@ label p {
 #submit {
   margin:auto;
   order:3;
+}
+
+.entryLog {
+  background: darkred;
+  width:80%;
+  margin:80px auto;
+  padding: 30px;
+  border-radius:50px;
+}
+
+.journalEntry {
+  margin:60px 30px 60px 30px;
 }

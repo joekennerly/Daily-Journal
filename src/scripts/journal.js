@@ -1,19 +1,71 @@
-// Once you define that variable and give it a default value of a blank array, use the push() method to add the journalEntry object you defined to the array.
+// Collection of all entries
+const allEntries = [
+  {
+    date: "march",
+    title: "title",
+    entry: "this is entry",
+    mood: "mood"
+  },
+  {
+    date: "hhhhh",
+    title: "title",
+    entry: "this is entry",
+    mood: "mood"
+  },
+  {
+    date: "march",
+    title: "title",
+    entry: "this is entry",
+    mood: "mood"
+  },
+  {
+    date: "march",
+    title: "title",
+    entry: "this is entry",
+    mood: "mood"
+  },
+  {
+    date: "march",
+    title: "title",
+    entry: "this is entry",
+    mood: "mooblahd"
+  }
+];
 
-// Create a container
-const allEntries = []
-
-console.log(allEntries);
 
 // Create a template
-const journalEntryObject = {
-  date:"march",
-  title:"title",
-  entry:"this is entry",
-  mood:"mood"
+const entryTemplate = {
+  date: "march",
+  title: "title",
+  entry: "this is entry",
+  mood: "mood"
 }
 
 // Push the object
-allEntries.push(journalEntryObject)
+allEntries.push(entryTemplate);
 
-console.log(allEntries)
+// Select HTML containter
+const container = document.querySelector(".entryLog");
+
+// Create and return a string template that will output HTML
+const makeJournalEntry = journalEntry => {
+  return `
+  <div class="journalEntry">
+    <h1>${journalEntry.title}</h1>
+    <p>${journalEntry.date}</p>
+    <p>${journalEntry.entry}</p>
+    <p>${journalEntry.mood}</p>
+  </div>
+  `;
+};
+
+// Function that adds each entry to the DOM
+const renderJournalEntries = entries => {
+
+   entries.forEach( entry => {
+     container.innerHTML += makeJournalEntry(entry)
+   })
+};
+
+// Invoke the render function
+renderJournalEntries(allEntries);

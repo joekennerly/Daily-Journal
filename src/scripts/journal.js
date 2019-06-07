@@ -1,37 +1,15 @@
-// Collection of all entries
-const allEntries = [
-  {
-    date: "march",
-    title: "title",
-    entry: "this is entry",
-    mood: "mood"
-  },
-  {
-    date: "hhhhh",
-    title: "title",
-    entry: "this is entry",
-    mood: "mood"
-  },
-  {
-    date: "march",
-    title: "title",
-    entry: "this is entry",
-    mood: "mood"
-  },
-  {
-    date: "march",
-    title: "title",
-    entry: "this is entry",
-    mood: "mood"
-  },
-  {
-    date: "march",
-    title: "title",
-    entry: "this is entry",
-    mood: "mooblahd"
-  }
-];
+// Select HTML containter
+const container = document.querySelector(".entryLog");
 
+// Request Data to be Displayed
+fetch("http://localhost:3000/entries")
+.then(response => response.json())
+.then(entries => {
+  // Push the object
+  entries.push(entryTemplate);
+  // Invoke the render function
+  renderJournalEntries(entries);
+  });
 
 // Create a template
 const entryTemplate = {
@@ -39,15 +17,9 @@ const entryTemplate = {
   title: "title",
   entry: "this is entry",
   mood: "mood"
-}
+};
 
-// Push the object
-allEntries.push(entryTemplate);
-
-// Select HTML containter
-const container = document.querySelector(".entryLog");
-
-// Create and return a string template that will output HTML
+// return a string of HTML
 const makeJournalEntry = journalEntry => {
   return `
   <div class="journalEntry">
@@ -61,11 +33,7 @@ const makeJournalEntry = journalEntry => {
 
 // Function that adds each entry to the DOM
 const renderJournalEntries = entries => {
-
-   entries.forEach( entry => {
-     container.innerHTML += makeJournalEntry(entry)
-   })
+  entries.forEach(entry => {
+    container.innerHTML += makeJournalEntry(entry);
+  });
 };
-
-// Invoke the render function
-renderJournalEntries(allEntries);

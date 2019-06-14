@@ -1,9 +1,9 @@
-// Request Data to be Displayed
-fetch("http://localhost:3000/entries")
-.then(response => response.json())
-.then(entries => {
-  // Push the object
-  entries.push(entryTemplate);
-  // Invoke the render function
-  renderJournalEntries(entries);
-});
+// Make sure to run json-server in api/
+// json-server -w entries.json
+
+const API = {
+  getJournalEntries() {
+    return fetch("http://localhost:3000/entries")
+      .then(response => response.json()) 
+  }
+}

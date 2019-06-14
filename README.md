@@ -1,4 +1,4 @@
-GIT WORKFLOW
+# GIT WORKFLOW
 --------
 01. mg (directory)
 02. touch (file)

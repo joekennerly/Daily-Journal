@@ -5,9 +5,6 @@ import { API } from "./data.js"
 API.getJournalEntries().then(entries => entriesDOM.renderJournalEntries(entries))
 
 document.querySelector('#submit').addEventListener('click', event => {
-  // Prevent the page from reloading
-  event.preventDefault()
-
   // Save entry values into an object
   let newEntry = {
     date: document.querySelector("#journalDate").value,
@@ -16,11 +13,13 @@ document.querySelector('#submit').addEventListener('click', event => {
     mood: document.querySelector("#Mood").value
   }
   
+  event.preventDefault()
   console.log(newEntry);
+
   // fetch("http://localhost:3000/entries", {
   //   method: "POST",
   //   header: {
-  //     "content-type": "application/json"
+  //     "Content-Type": "application/json"
   //   },
   //   body:JSON.stringify(newEntry)
   // })

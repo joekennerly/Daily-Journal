@@ -1,4 +1,5 @@
 let counter = 0
+
 const entryComponents = {
   makeJournalEntry(journalEntry) {
     counter++

@@ -12,16 +12,7 @@ document.querySelector('#submit').addEventListener('click', event => {
     entry: document.querySelector("#entry").value,
     mood: document.querySelector("#Mood").value
   }
+    API.postEntry(newEntry)
   
-  event.preventDefault()
-  console.log(newEntry);
-
-  // fetch("http://localhost:3000/entries", {
-  //   method: "POST",
-  //   header: {
-  //     "Content-Type": "application/json"
-  //   },
-  //   body:JSON.stringify(newEntry)
-  // })
   
 })

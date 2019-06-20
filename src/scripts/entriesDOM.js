@@ -1,7 +1,10 @@
-const dom = {
+import { Component } from "./entryComponent.js"
+
+export const entriesDOM = {
   renderJournalEntries(entries) {
     entries.forEach(entry => {
-      document.querySelector('.entryLog').innerHTML += components.makeJournalEntry(entry);
+      document.querySelector('.entryLog')
+      .appendChild(Component.makeJournalEntry(entry))
     });
   }
-}
+} 

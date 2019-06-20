@@ -13,6 +13,34 @@
       "entry": "",
       "mood": "Okay",
       "id": 2
+    },
+    {
+      "date": "",
+      "title": "",
+      "entry": "",
+      "mood": "Okay",
+      "id": 3
+    },
+    {
+      "date": "",
+      "title": "",
+      "entry": "",
+      "mood": "Okay",
+      "id": 4
+    },
+    {
+      "date": "2019-06-19",
+      "title": "It works",
+      "entry": "I think it works1",
+      "mood": "Happy",
+      "id": 5
+    },
+    {
+      "date": "",
+      "title": "",
+      "entry": "",
+      "mood": "Okay",
+      "id": 6
     }
   ]
 }

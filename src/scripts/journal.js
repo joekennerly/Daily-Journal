@@ -22,9 +22,9 @@ document.querySelector('#submit').addEventListener('click', event => {
   API.postEntry(currentObj)
     .then(dataJS => {
       console.log(dataJS)
-  //   entriesDOM.entryLog.innerHTML = ""
-  //     API.getJournalEntries()
-  //     .then(entries => entriesDOM.renderJournalEntries(entries))
+      document.querySelector('.entryLog').innerHTML = ""
+      API.getJournalEntries()
+      .then(entries => entriesDOM.renderJournalEntries(entries))
   })
   
 })

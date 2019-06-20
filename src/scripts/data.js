@@ -14,6 +14,16 @@ export const API = {
     })
     .then (jsonData => jsonData.json())
   },
+  deleteEntry: function deleteEntry(id) {
+    return fetch(`http://localhost:3000/entries/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+    .then (jsonData => jsonData.json())
+  },
+
   // factory function helper
   createEntryObj: function createEntryObj(date, title, entry, mood) {
     return {
@@ -24,4 +34,3 @@ export const API = {
     }
   } 
 }
-// export {API}

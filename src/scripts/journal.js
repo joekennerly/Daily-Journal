@@ -2,17 +2,31 @@ import { entriesDOM } from "./entriesDOM.js"
 import { API } from "./data.js"
 
 // function to display previous entries to the page
-API.getJournalEntries().then(entries => entriesDOM.renderJournalEntries(entries))
+API.getJournalEntries()
+  .then(entries => {
+    console.log(entries)
+    entriesDOM.renderJournalEntries(entries)
+  })
 
 document.querySelector('#submit').addEventListener('click', event => {
-  // Save entry values into an object
-  let newEntry = {
-    date: document.querySelector("#journalDate").value,
-    title: document.querySelector("#concepts").value,
-    entry: document.querySelector("#entry").value,
-    mood: document.querySelector("#Mood").value
-  }
-    API.postEntry(newEntry)
-  
+  event.preventDefault()
+  console.log("button clicked");
+
+  let newDate = document.querySelector("#journalDate").value
+  let newConcepts = document.querySelector("#concepts").value
+  let newEntry = document.querySelector("#entry").value
+  let newMood = document.querySelector("#Mood").value
+
+  let currentObj = API.createEntryObj(newDate, newConcepts, newEntry, newMood)
+  console.log(currentObj);
+
+  // API.postEntry(currentObj)
+  //   .then(data => data.json())
+  //   .then(dataJS => {
+  //     console.log(dataJS)
+  //   entriesDOM.entryLog.innerHTML = ""
+  //     API.getJournalEntries()
+  //     .then(entries => entriesDOM.renderJournalEntries(entries))
+  // })
   
 })

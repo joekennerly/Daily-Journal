@@ -10,7 +10,6 @@ API.getJournalEntries()
 
 document.querySelector('#submit').addEventListener('click', event => {
   event.preventDefault()
-  console.log("button clicked");
 
   let newDate = document.querySelector("#journalDate").value
   let newConcepts = document.querySelector("#concepts").value
@@ -20,13 +19,12 @@ document.querySelector('#submit').addEventListener('click', event => {
   let currentObj = API.createEntryObj(newDate, newConcepts, newEntry, newMood)
   console.log(currentObj);
 
-  // API.postEntry(currentObj)
-  //   .then(data => data.json())
-  //   .then(dataJS => {
-  //     console.log(dataJS)
+  API.postEntry(currentObj)
+    .then(dataJS => {
+      console.log(dataJS)
   //   entriesDOM.entryLog.innerHTML = ""
   //     API.getJournalEntries()
   //     .then(entries => entriesDOM.renderJournalEntries(entries))
-  // })
+  })
   
 })

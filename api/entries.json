@@ -6,6 +6,13 @@
       "entry": "this is entry",
       "mood": "mood",
       "id": 1
+    },
+    {
+      "date": "",
+      "title": "",
+      "entry": "",
+      "mood": "Okay",
+      "id": 2
     }
   ]
 }

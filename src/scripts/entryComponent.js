@@ -16,14 +16,15 @@ export const Component = {
       let id = journalEntry.id
       // let id = event.target.id
       console.log("delete btn clicked", id)
-      // API.deleteEntry(id)
-      //   .then(() => {
-      //     API.getJournalEntries()
-      //     .then(entries => {
-      //       console.log("entries on delete", entries)
-      //       entriesDOM.renderJournalEntries(entries)
-      //     })
-      // })
+      API.deleteEntry(id)
+        .then((dataJS) => {
+          document.querySelector('.entryLog').innerHTML = ""
+          API.getJournalEntries()
+          .then(entries => {
+            console.log("entries on delete", entries)
+            entriesDOM.renderJournalEntries(entries)
+          })
+      })
     })
     newEntry.appendChild(deleteButton)
     return newEntry 

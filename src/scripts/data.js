@@ -1,10 +1,10 @@
 export const API = {
   // Each fetch returns an Array
-  getJournalEntries: function getJournalEntries() {
+  getJournalEntries() {
     return fetch("http://localhost:3000/entries")
       .then(response => response.json()) 
   },
-  postEntry: function postEntry(entry) {
+  postEntry(entry) {
     return fetch("http://localhost:3000/entries", {
       method: "POST",
       headers: {
@@ -14,7 +14,7 @@ export const API = {
     })
     .then (jsonData => jsonData.json())
   },
-  deleteEntry: function deleteEntry(id) {
+  deleteEntry(id) {
     return fetch(`http://localhost:3000/entries/${id}`, {
       method: "DELETE",
       headers: {

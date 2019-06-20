@@ -1,7 +1,6 @@
 import { Component } from "./entryComponent.js"
 
-const entriesDOM = {
-
+export const entriesDOM = {
   renderJournalEntries(entries) {
     entries.forEach(entry => {
       document.querySelector('.entryLog')
@@ -9,4 +8,3 @@ const entriesDOM = {
     });
   }
 } 
-export {entriesDOM}

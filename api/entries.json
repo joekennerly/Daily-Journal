@@ -1,13 +1,6 @@
 {
   "entries": [
     {
-      "date": "march",
-      "title": "HELLO",
-      "entry": "this is entry",
-      "mood": "mood",
-      "id": 1
-    },
-    {
       "date": "",
       "title": "",
       "entry": "",
@@ -22,13 +15,6 @@
       "id": 3
     },
     {
-      "date": "",
-      "title": "",
-      "entry": "",
-      "mood": "Okay",
-      "id": 4
-    },
-    {
       "date": "2019-06-19",
       "title": "It works",
       "entry": "I think it works1",
@@ -41,6 +27,13 @@
       "entry": "",
       "mood": "Okay",
       "id": 6
+    },
+    {
+      "date": "",
+      "title": "",
+      "entry": "",
+      "mood": "Okay",
+      "id": 7
     }
   ]
 }

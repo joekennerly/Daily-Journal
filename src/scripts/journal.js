@@ -4,7 +4,7 @@ import { API } from "./data.js"
 // function to display previous entries to the page
 API.getJournalEntries()
   .then(entries => {
-    console.log(entries)
+    console.log("entries on load", entries)
     entriesDOM.renderJournalEntries(entries)
   })
 

@@ -1,39 +1,18 @@
 {
   "entries": [
     {
-      "date": "",
-      "title": "",
-      "entry": "",
-      "mood": "Okay",
+      "date": "2019-06-19",
+      "title": "This is the first entry",
+      "entry": "I finally got this working. I'm very happy about that. If you're seeing this, it means I haven't wiped my database yet.",
+      "mood": "Happy",
       "id": 2
     },
     {
-      "date": "",
-      "title": "",
-      "entry": "",
-      "mood": "Okay",
-      "id": 3
-    },
-    {
-      "date": "2019-06-19",
-      "title": "It works",
-      "entry": "I think it works1",
+      "date": "2019-06-21",
+      "title": "Linkedin",
+      "entry": "Worked on Linked in",
       "mood": "Happy",
-      "id": 5
-    },
-    {
-      "date": "",
-      "title": "",
-      "entry": "",
-      "mood": "Okay",
-      "id": 6
-    },
-    {
-      "date": "",
-      "title": "",
-      "entry": "",
-      "mood": "Okay",
-      "id": 7
+      "id": 3
     }
   ]
 }

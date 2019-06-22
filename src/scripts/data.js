@@ -1,10 +1,13 @@
+import { entriesDOM } from "./entriesDOM.js"
+
 export const API = {
   // Each fetch returns an Array
-  getJournalEntries: function getJournalEntries() {
+  getJournalEntries() {
     return fetch("http://localhost:3000/entries")
       .then(response => response.json()) 
   },
-  postEntry: function postEntry(entry) {
+
+  postEntry(entry) {
     return fetch("http://localhost:3000/entries", {
       method: "POST",
       headers: {
@@ -12,25 +15,37 @@ export const API = {
       },
       body: JSON.stringify(entry)
     })
-    .then (jsonData => jsonData.json())
+      .then(jsonData => jsonData.json())
+      .then(() => this.reloadPage());
   },
-  deleteEntry: function deleteEntry(id) {
+
+  deleteEntry(id) {
     return fetch(`http://localhost:3000/entries/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json"
       }
     })
-    .then (jsonData => jsonData.json())
+      .then(jsonData => jsonData.json())
+      .then(() => this.reloadPage())
   },
 
-  // factory function helper
-  createEntryObj: function createEntryObj(date, title, entry, mood) {
-    return {
-      date: date,
-      title: title,
-      entry: entry,
-      mood: mood
-    }
-  } 
+  updateEntry(id) {
+    return fetch(`http://localhost:3000/entries/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+      .then(jsonData => jsonData.json())
+      .then(() => this.reloadPage())
+  },
+
+  reloadPage() {
+    document.querySelector('.entryLog').innerHTML = ""
+    return this.getJournalEntries()
+      .then(entries => {
+        entriesDOM.renderJournalEntries(entries)
+    })
+  }
 }

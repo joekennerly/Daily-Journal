@@ -25,7 +25,7 @@ export const API = {
   },
 
   // factory function helper
-  createEntryObj: function createEntryObj(date, title, entry, mood) {
+  createEntryObj(date, title, entry, mood) {
     return {
       date: date,
       title: title,

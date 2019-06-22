@@ -1,3 +1,18 @@
 {
-  "entries": []
+  "entries": [
+    {
+      "date": "2019-06-19",
+      "title": "This is the first entry",
+      "entry": "I finally got this working. I'm very happy about that. If you're seeing this, it means I haven't wiped my database yet.",
+      "mood": "Happy",
+      "id": 2
+    },
+    {
+      "date": "2019-06-21",
+      "title": "Linkedin",
+      "entry": "Worked on Linked in",
+      "mood": "Happy",
+      "id": 3
+    }
+  ]
 }

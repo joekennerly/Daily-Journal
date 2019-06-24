@@ -9,14 +9,14 @@
     <title>Daily Journal</title>
   </head>
   <body>
-    <form id="journal-form" class="journal-form" action="">
+    <div id="journal-form" class="journal-form">
       <h1 class="prompt">Journal</h1>
 
       <fieldset>
         <label for="JournalDate">
           <p>Date of Entry:</p>
         </label>
-        <input type="date" name="journalDate" id="journalDate" required/>
+        <input type="date" name="journalDate" id="journalDate" required />
       </fieldset>
 
       <fieldset class="fieldset-large">
@@ -25,7 +25,7 @@
             Concepts Covered:
           </p>
         </label>
-        <input type="text" name="concepts" id="concepts" required maxlength="80"/>
+        <input type="text" name="concepts" id="concepts" />
       </fieldset>
 
       <fieldset class="fieldset-large">
@@ -34,7 +34,7 @@
             Journal Entry:
           </p>
         </label>
-        <textarea name="entry" id="entry" required ></textarea>
+        <textarea name="entry" id="entry"></textarea>
       </fieldset>
 
       <fieldset>
@@ -44,16 +44,18 @@
           </p>
         </label>
         <select name="Mood" id="Mood">
+          <option value=""></option>
           <option value="Okay">Okay</option>
           <option value="Happy">Happy</option>
           <option value="Sad">Sad</option>
           <option value="Angry">Angry</option>
           <option value="Confused">Confused</option>
+          <option value="Excited">Excited</option>
         </select>
       </fieldset>
 
       <button id="submit" class="btn prompt">Submit</button>
-    </form>
+    </div>
 
     <article class="entryLog"></article>
 

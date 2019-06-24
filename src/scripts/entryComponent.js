@@ -11,10 +11,9 @@ export const Component = {
 
     newEntry.innerHTML = `
     <h2 class="prompt">${journalEntry.title}</h2>
-    <p><i>Date</i> ${journalEntry.date} <i>-&-</i> <i>Mood </i> ${
-      journalEntry.mood
-    }</p></br>
-    <p><i>Entry</i> ${journalEntry.entry}</p>
+    <p><i>Date:</i> ${journalEntry.date}</p>
+    <p><i>Mood:</i> ${journalEntry.mood}</p>
+    <p><i>Entry:</i> ${journalEntry.entry}</p>
     </br>`;
 
     let div = document.createElement("div")
@@ -30,7 +29,6 @@ export const Component = {
     editButton.textContent = "Edit";
     editButton.addEventListener("click", () => {
       let editForm = createEditForm(journalEntry)
-      // console.log(editForm);
       addFormToDom(div, editForm)
     });
 
@@ -45,11 +43,11 @@ export const Component = {
 
 function createEditForm(entry) {
   return `
-  <input id="date-edit" type="date" value="${entry.date}" autofocus >
+  <input id="date-edit" type="date" value="${entry.date}">
 
   <input id="title-edit" type="text" value="${entry.title}">
 
-  <input id="entry-edit" type="text" value="${entry.entry}">
+  <input id="entry-edit" type="text" value="${entry.entry}" autofocus>
 
   <input id="mood-edit" type="text" value="${entry.mood}">
 

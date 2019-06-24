@@ -23,8 +23,16 @@ document.querySelector("#submit").addEventListener("click", () => {
     document.querySelector("#Mood").value
   );
   
-  console.log(currentObj);
   
+  function formCheck(object) {
+    return Object.values(object).includes("")
+  }
 
-  API.postEntry(currentObj)
+  if (formCheck(currentObj)) {
+    alert("All fields must be filled out!")
+  }
+  else {
+    API.postEntry(currentObj)
+  }
+  
 });

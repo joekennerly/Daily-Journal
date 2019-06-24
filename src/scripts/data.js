@@ -1,7 +1,16 @@
+console.log("API data");
+
 import { entriesDOM } from "./entriesDOM.js"
 
 export const API = {
-  // Each fetch returns an Array
+  reloadPage() {
+    document.querySelector('.entryLog').innerHTML = ""
+    return this.getJournalEntries()
+      .then(entries => {
+        entriesDOM.renderJournalEntries(entries)
+    })
+  },
+
   getJournalEntries() {
     return fetch("http://localhost:3000/entries")
       .then(response => response.json()) 
@@ -30,22 +39,15 @@ export const API = {
       .then(() => this.reloadPage())
   },
 
-  updateEntry(id) {
-    return fetch(`http://localhost:3000/entries/${id}`, {
+  updateEntry(entry) {
+    return fetch(`http://localhost:3000/entries/${entry.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
-      }
+      },
+      body: JSON.stringify(entry)
     })
       .then(jsonData => jsonData.json())
       .then(() => this.reloadPage())
-  },
-
-  reloadPage() {
-    document.querySelector('.entryLog').innerHTML = ""
-    return this.getJournalEntries()
-      .then(entries => {
-        entriesDOM.renderJournalEntries(entries)
-    })
   }
 }

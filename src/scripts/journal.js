@@ -1,15 +1,13 @@
+console.log("main")
 import { entriesDOM } from "./entriesDOM.js";
 import { API } from "./data.js";
 
 // function to display previous entries to the page
 API.getJournalEntries().then(entries => {
-  console.log("entries on load", entries);
   entriesDOM.renderJournalEntries(entries);
 });
 
 document.querySelector("#submit").addEventListener("click", () => {
-
-  // factory function helper
   function createEntryObj(date, title, entry, mood) {
     return {
       date: date,
@@ -18,13 +16,23 @@ document.querySelector("#submit").addEventListener("click", () => {
       mood: mood
     };
   }
-
   let currentObj = createEntryObj(
     document.querySelector("#journalDate").value,
     document.querySelector("#concepts").value,
     document.querySelector("#entry").value,
     document.querySelector("#Mood").value
   );
+  
+  
+  function formCheck(object) {
+    return Object.values(object).includes("")
+  }
 
-  API.postEntry(currentObj)
+  if (formCheck(currentObj)) {
+    alert("All fields must be filled out!")
+  }
+  else {
+    API.postEntry(currentObj)
+  }
+  
 });

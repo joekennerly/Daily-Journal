@@ -4,7 +4,7 @@
       "date": "2019-06-24",
       "title": "Hey",
       "entry": "I'm so happy",
-      "mood": "happy",
+      "mood": "Happy",
       "id": 1
     },
     {
@@ -13,6 +13,27 @@
       "entry": "hello",
       "mood": "Happy",
       "id": 2
+    },
+    {
+      "date": "2019-06-26",
+      "title": "im ok",
+      "entry": "jsut ok",
+      "mood": "Okay",
+      "id": 3
+    },
+    {
+      "date": "2019-06-26",
+      "title": "rly confusted",
+      "entry": "v much",
+      "mood": "Confused",
+      "id": 4
+    },
+    {
+      "date": "2019-06-26",
+      "title": "Filter by mood",
+      "entry": "I have filtered everything by mood. next step may be to adjust css to have a mobile column",
+      "mood": "Okay",
+      "id": 5
     }
   ]
 }

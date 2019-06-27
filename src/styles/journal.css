@@ -11,14 +11,15 @@ body {
 
 .journal-form {
   background: blue;
-  width: 80%;
+  width: 30%;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly; 
-  margin: 10px auto;
+  /* margin: 10px auto; */
   border-radius: 10px;
   padding: 28px;
   box-shadow: 0px 0px 500px blue;
+  position: fixed;
 }
 
 h1, h2, h3{
@@ -29,7 +30,7 @@ h1, h2, h3{
 }
 
 fieldset {
-  border:0;
+  /* border:0; */
   border-radius: 4px;
   margin-bottom: 20px;
   padding: 0 20px 20px 20px;
@@ -65,18 +66,25 @@ label p {
   margin:auto;
   order:3;
 }
+
 i {
   font-size:.8em;
 }
 
 .entryLog {
   background: darkblue;
-  width:80%;
-  margin:80px auto;
+  width:60%;
+  /* margin:80px auto; */
   padding: 30px;
   border-radius:10px;
+  position:absolute;
+  right:0;
 }
 
 .journalEntry {
   margin:60px 30px 60px 30px;
+}
+
+#filter-by-mood {
+  order:4;
 }

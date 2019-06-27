@@ -44,13 +44,9 @@ export const Component = {
 function createEditForm(entry) {
   return `
   <input id="date-edit" type="date" value="${entry.date}">
-
   <input id="title-edit" type="text" value="${entry.title}">
-
-  <input id="entry-edit" type="text" value="${entry.entry}" autofocus>
-
+  <textarea id="entry-edit" type="text">${entry.entry}</textarea>
   <input id="mood-edit" type="text" value="${entry.mood}">
-
   <input type="hidden" id="entry-id" value="${entry.id}">
 
   <button id="save-edit">save</button>`;

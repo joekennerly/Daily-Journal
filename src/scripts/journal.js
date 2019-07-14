@@ -1,6 +1,7 @@
 console.log("main")
 import { entriesDOM } from "./entriesDOM.js";
 import { API } from "./data.js";
+import {act} from "./act.js"
 
 // function to display previous entries to the page
 API.getJournalEntries().then(entries => {
@@ -22,7 +23,7 @@ document.querySelector("#submit").addEventListener("click", () => {
     document.querySelector("#entry").value,
     document.querySelector("#Mood").value
   );
-  
+
   function formCheck(object) {
     return Object.values(object).includes("")
   }
@@ -33,20 +34,8 @@ document.querySelector("#submit").addEventListener("click", () => {
   else {
     API.postEntry(currentObj)
   }
-  
+
 });
 
-let allRadioButtons = document.getElementsByName('mood')
-allRadioButtons.forEach(radioButton => {
-  radioButton.addEventListener("click", event => {
-    const mood = event.target.value
-    console.log(mood)
-    API.getJournalEntries()
-      .then(entries => {
-      let filteredEntries = entries.filter(anEntry => anEntry.mood === mood)
-      console.log(filteredEntries)
-      document.querySelector(".entryLog").innerHTML = ""  
-      entriesDOM.renderJournalEntries(filteredEntries)  
-    });
-  })
-})
+//Load the filter by mood
+act.filterButtons()

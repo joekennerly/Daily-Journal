@@ -9,22 +9,8 @@
     },
     {
       "date": "2019-06-20",
-      "title": "stuff",
-      "entry": "hello",
-      "mood": "Happy",
-      "id": 2
-    },
-    {
-      "date": "2019-06-26",
-      "title": "im ok",
-      "entry": "jsut ok",
-      "mood": "Okay",
-      "id": 3
-    },
-    {
-      "date": "2019-06-26",
       "title": "rly confusted",
-      "entry": "v much",
+      "entry": "yayayayayaya",
       "mood": "Confused",
       "id": 4
     },
@@ -34,6 +20,27 @@
       "entry": "I have filtered everything by mood. next step may be to adjust css to have a mobile column",
       "mood": "Okay",
       "id": 5
+    },
+    {
+      "date": "2019-06-27",
+      "title": "hi",
+      "entry": "there",
+      "mood": "Okay",
+      "id": 6
+    },
+    {
+      "date": "2019-06-27",
+      "title": "hi",
+      "entry": "there",
+      "mood": "Okay",
+      "id": 7
+    },
+    {
+      "date": "2019-06-27",
+      "title": "hey",
+      "entry": "man",
+      "mood": "Okay",
+      "id": 8
     }
   ]
 }

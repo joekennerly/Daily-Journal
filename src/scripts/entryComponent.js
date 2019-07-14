@@ -54,7 +54,7 @@ function createEditForm(entry) {
 
 function addFormToDom(container, editForm) {
   container.innerHTML = editForm
-  let saveBtn = document.querySelector('#save-edit') 
+  let saveBtn = document.querySelector('#save-edit')
   saveBtn.addEventListener('click', () => {
     let editDate = document.querySelector('#date-edit').value
     let editTitle = document.querySelector('#title-edit').value
@@ -72,49 +72,3 @@ function addFormToDom(container, editForm) {
     API.updateEntry(updateObject)
   })
 }
-
-// This is the html I need to build a component out of
-
-{/* <fieldset>
-        <label for="JournalDate">
-          <p>Date of Entry:</p>
-        </label>
-        <input type="date" name="journalDate" id="journalDate" required />
-      </fieldset>
-
-      <fieldset class="fieldset-large">
-        <label for="ConceptsCovered">
-          <p>
-            Concepts Covered:
-          </p>
-        </label>
-        <input type="text" name="concepts" id="concepts" />
-      </fieldset>
-
-      <fieldset class="fieldset-large">
-        <label for="Entry">
-          <p>
-            Journal Entry:
-          </p>
-        </label>
-        <textarea name="entry" id="entry"></textarea>
-      </fieldset>
-
-      <fieldset>
-        <label for="Mood">
-          <p>
-            Mood for the day
-          </p>
-        </label>
-        <select name="Mood" id="Mood">
-          <option value=""></option>
-          <option value="Okay">Okay</option>
-          <option value="Happy">Happy</option>
-          <option value="Sad">Sad</option>
-          <option value="Angry">Angry</option>
-          <option value="Confused">Confused</option>
-          <option value="Excited">Excited</option>
-        </select>
-      </fieldset>
-
-      <button id="submit" class="btn prompt">Submit</button> */}

@@ -1,4 +1,4 @@
-console.log("entryComponents");
+// console.log("entryComponents");
 
 import { API } from "./data.js";
 

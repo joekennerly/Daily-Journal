@@ -1,6 +1,16 @@
 import { API } from "./data.js"
 
 export const act = {
+  render(component, container) {
+    document.querySelector(container).innerHTML = component
+  },
+  plus(component, container) {
+    document.querySelector(container).innerHTML += component
+  },
+  select(selection) {
+    return document.querySelector(selection)
+  },
+
   filterButtons() {
     let allRadioButtons = document.getElementsByName('mood')
     allRadioButtons.forEach(radioButton => {

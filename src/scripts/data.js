@@ -1,19 +1,23 @@
-console.log("API data");
+// console.log("API data");
 
-import { entriesDOM } from "./entriesDOM.js"
+import { dom } from "./dom.js"
 
 export const API = {
   reloadPage() {
     document.querySelector('.entryLog').innerHTML = ""
     return this.getJournalEntries()
       .then(entries => {
-        entriesDOM.renderJournalEntries(entries)
+        dom.renderJournalEntries(entries)
     })
   },
 
+  get(resource) {
+    return fetch(`http://localhost:3000/${resource}`)
+      .then(response => response.json())
+  },
   getJournalEntries() {
     return fetch("http://localhost:3000/entries")
-      .then(response => response.json()) 
+      .then(response => response.json())
   },
 
   postEntry(entry) {

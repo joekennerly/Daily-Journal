@@ -1,0 +1,10 @@
+#filter-form{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items:flex-end;
+}
+#filter-by-mood,
+#search-bar {
+  flex-basis: 40%;
+}

@@ -12,6 +12,6 @@ API.getJournalEntries().then(entries => {
 act.postNewEntry()
 
 //Load the filter by mood
-act.filterButtons()
-
+dom.filterButtons()
 dom.addSearchBar()
+
